@@ -36,7 +36,7 @@ public class Login {
             System.out.println(ventana + " : " + identificador);
         }
     }
-
+    //Datos para el Coordinador
     public void ingresarDatosCorrectosCoordinador() {
         wait.until(ExpectedConditions.visibilityOf(input_usuario));
         input_usuario.sendKeys ("admin");
@@ -52,6 +52,25 @@ public class Login {
         wait.until(ExpectedConditions.visibilityOf(input_password));
         input_password.sendKeys("12345");
     }
+    //Fin datos para el Coordinador
+
+    //Datos para el Docente
+    public void ingresarDatosCorrectosDocente() {
+        wait.until(ExpectedConditions.visibilityOf(input_usuario));
+        input_usuario.sendKeys ("U18310322");
+
+        wait.until(ExpectedConditions.visibilityOf(input_password));
+        input_password.sendKeys("7279");
+    }
+
+    public void ingresarDatosIncorrectosDocente() {
+        wait.until(ExpectedConditions.visibilityOf(input_usuario));
+        input_usuario.sendKeys ("U18310322");
+
+        wait.until(ExpectedConditions.visibilityOf(input_password));
+        input_password.sendKeys("12345");
+    }
+    // Fin datos para el Docente
 
     public void ClickBtnLogin (){
         btn_login.click();

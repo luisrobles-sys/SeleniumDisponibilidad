@@ -10,10 +10,12 @@ public class DisponibilidadDefinitions {
 
     MenuPage menu;
     Login logincoordinador;
+    Login logindocente;
 
     public DisponibilidadDefinitions() {
         menu = new MenuPage(Hooks.driver);
         logincoordinador = new Login(Hooks.driver);
+        logindocente = new Login(Hooks.driver);
 
     }
 
@@ -37,11 +39,21 @@ public class DisponibilidadDefinitions {
         logincoordinador.ingresarDatosIncorrectosCoordinador();
     }
 
+    @And("colocamos los datos correctos del docente")
+    public void colocamosLosDatosCorrectosDelDocente() {
+        logindocente.ingresarDatosCorrectosDocente();
+
+    }
+
+    @And("colocamos los datos incorrectos del docente")
+    public void colocamosLosDatosIncorrectosDelDocente() {
+        logindocente.ingresarDatosIncorrectosDocente();
+    }
+
     @When("le doy en el boton de Login")
     public void leDoyEnElBotonDeLogin() {
         logincoordinador.ClickBtnLogin();
 
     }
-
 
 }
