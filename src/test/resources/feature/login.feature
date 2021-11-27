@@ -3,8 +3,9 @@ Feature: ID:6 MS para mantenimiento de usuarios
   Quiero crear un MS en REST
   Para el mantenimiento de Usuarios del Portal de Disponibilidad Horaria
 
-  Scenario: Datos correctos
+  Scenario: Datos correctos Coordinador
     Given que tengo un MS de mantenimiento de usuarios
-    When doy click en el boton de login
+    When doy click en el boton de Sign In
     And colocamos los datos del coordinador
+    When le doy en el boton de Login
 

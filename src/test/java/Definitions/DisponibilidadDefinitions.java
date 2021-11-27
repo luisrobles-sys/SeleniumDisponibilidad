@@ -11,11 +11,14 @@ public class DisponibilidadDefinitions {
     MenuPage menu;
     Login logincoordinador;
 
+
     //CapturarDatosTarjetaPage captura;
     //CheckCreditPage credit;
 
     public DisponibilidadDefinitions() {
         menu = new MenuPage(Hooks.driver);
+        logincoordinador = new Login(Hooks.driver);
+
         //captura = new CapturarDatosTarjetaPage(Hooks.driver);
         //credit = new CheckCreditPage(Hooks.driver);
 
@@ -27,12 +30,19 @@ public class DisponibilidadDefinitions {
         Hooks.driver.get("http://67.219.137.139/");
     }
 
-    @When("doy click en el boton de login")
+    @When("doy click en el boton de Sign In")
     public void doyClickEnElBotonDeLogin() {
         menu.clickSignIn();
     }
 
     @And("colocamos los datos del coordinador")
     public void colocamosLosDatosDelCoordinador() {
+        logincoordinador.ingresarDatosCoordinador();
+    }
+
+    @When("le doy en el boton de Login")
+    public void leDoyEnElBotonDeLogin() {
+        logincoordinador.ClickBtnLogin();
+
     }
 }

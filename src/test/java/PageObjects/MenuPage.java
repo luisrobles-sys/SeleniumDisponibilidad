@@ -12,7 +12,8 @@ public class MenuPage {
     private WebDriverWait wait;
 
     //@FindBy(linkText = "Sign In") private WebElement lnk_signIn;  //Generador
-    @FindBy(xpath = "/html/body/app-root/app-header/nav/div/ul/li/a") private WebElement lbl_login;
+    @FindBy(xpath = "//*[@id=\"signin\"]") private WebElement lbl_login;
+
     //@FindBy (linkText = "Check Credit Card Limit") private WebElement lnk_checkCredit;
 
 
@@ -27,13 +28,5 @@ public class MenuPage {
         wait.until(ExpectedConditions.elementToBeClickable(lbl_login));
         lbl_login.click();
     }
-
-
-
-    //public void clickCheckCredit(){        //Wait ya ingresó anteriormente
-    //    lnk_checkCredit.click();
-    //}
-
-
 
 }

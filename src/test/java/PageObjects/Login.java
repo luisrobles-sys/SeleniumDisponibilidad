@@ -19,9 +19,7 @@ public class Login {
 
     @FindBy (xpath = "//*[@id=\"username\"]") private WebElement input_usuario;
     @FindBy (xpath = "//*[@id=\"password\"]") private WebElement input_password;
-
-    //@FindBy(xpath = "//h4[1]")  private WebElement lbl_tarjeta;
-    //@FindBy(xpath = "//h4[2]")  private WebElement lbl_cvv;
+    @FindBy(id = "login") private WebElement btn_login;
 
     public Login(WebDriver d){
 
@@ -40,17 +38,17 @@ public class Login {
         }
     }
 
-    public void Login(){
+    public void ingresarDatosCoordinador() {
         wait.until(ExpectedConditions.visibilityOf(input_usuario));
-        input_usuario.sendKeys(Login.usuario);
+        input_usuario.sendKeys ("admin");
+
+        wait.until(ExpectedConditions.visibilityOf(input_password));
+        input_password.sendKeys("1234");
     }
 
-
-//    public void ClickBtn (){
-//        btn_submit.click();
-//    }
-
-
+    public void ClickBtnLogin (){
+        btn_login.click();
+    }
 }
 
 
