@@ -1,0 +1,6 @@
+/target/test-classes/drivers/chromedriver.exe
+/target/test-classes/Definitions/DisponibilidadDefinitions.class
+/target/test-classes/Definitions/Hooks.class
+/target/test-classes/PageObjects/Login.class
+/target/test-classes/feature/login.feature
+/target/test-classes/PageObjects/MenuPage.class
