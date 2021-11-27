@@ -60,7 +60,7 @@ public class Login {
         input_usuario.sendKeys ("U18310322");
 
         wait.until(ExpectedConditions.visibilityOf(input_password));
-        input_password.sendKeys("7279");
+        input_password.sendKeys("5285");
     }
 
     public void ingresarDatosIncorrectosDocente() {
