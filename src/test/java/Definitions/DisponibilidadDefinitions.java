@@ -11,17 +11,9 @@ public class DisponibilidadDefinitions {
     MenuPage menu;
     Login logincoordinador;
 
-
-    //CapturarDatosTarjetaPage captura;
-    //CheckCreditPage credit;
-
     public DisponibilidadDefinitions() {
         menu = new MenuPage(Hooks.driver);
         logincoordinador = new Login(Hooks.driver);
-
-        //captura = new CapturarDatosTarjetaPage(Hooks.driver);
-        //credit = new CheckCreditPage(Hooks.driver);
-
 
     }
 
@@ -35,9 +27,14 @@ public class DisponibilidadDefinitions {
         menu.clickSignIn();
     }
 
-    @And("colocamos los datos del coordinador")
-    public void colocamosLosDatosDelCoordinador() {
-        logincoordinador.ingresarDatosCoordinador();
+    @And("colocamos los datos correctos del coordinador")
+    public void colocamosLosDatosCorrectosDelCoordinador() {
+        logincoordinador.ingresarDatosCorrectosCoordinador();
+    }
+
+    @And("colocamos los datos incorrectos del coordinador")
+    public void colocamosLosDatosIncorrectosDelCoordinador() {
+        logincoordinador.ingresarDatosIncorrectosCoordinador();
     }
 
     @When("le doy en el boton de Login")
@@ -45,4 +42,6 @@ public class DisponibilidadDefinitions {
         logincoordinador.ClickBtnLogin();
 
     }
+
+
 }

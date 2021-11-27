@@ -6,6 +6,11 @@ Feature: ID:6 MS para mantenimiento de usuarios
   Scenario: Datos correctos Coordinador
     Given que tengo un MS de mantenimiento de usuarios
     When doy click en el boton de Sign In
-    And colocamos los datos del coordinador
+    And colocamos los datos correctos del coordinador
     When le doy en el boton de Login
 
+  Scenario: Datos incorrectos Coordinador
+    Given que tengo un MS de mantenimiento de usuarios
+    When doy click en el boton de Sign In
+    And colocamos los datos incorrectos del coordinador
+    When le doy en el boton de Login

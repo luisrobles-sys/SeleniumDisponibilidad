@@ -13,7 +13,6 @@ public class Login {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    //protected static String tarjeta, cvv, mes, anio, monto;       //Es otra forma.
     protected static String usuario;
     protected static String password;
 
@@ -38,12 +37,20 @@ public class Login {
         }
     }
 
-    public void ingresarDatosCoordinador() {
+    public void ingresarDatosCorrectosCoordinador() {
         wait.until(ExpectedConditions.visibilityOf(input_usuario));
         input_usuario.sendKeys ("admin");
 
         wait.until(ExpectedConditions.visibilityOf(input_password));
         input_password.sendKeys("1234");
+    }
+
+    public void ingresarDatosIncorrectosCoordinador() {
+        wait.until(ExpectedConditions.visibilityOf(input_usuario));
+        input_usuario.sendKeys ("admin2");
+
+        wait.until(ExpectedConditions.visibilityOf(input_password));
+        input_password.sendKeys("12345");
     }
 
     public void ClickBtnLogin (){

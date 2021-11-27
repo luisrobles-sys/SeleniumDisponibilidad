@@ -11,10 +11,7 @@ public class MenuPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    //@FindBy(linkText = "Sign In") private WebElement lnk_signIn;  //Generador
     @FindBy(xpath = "//*[@id=\"signin\"]") private WebElement lbl_login;
-
-    //@FindBy (linkText = "Check Credit Card Limit") private WebElement lnk_checkCredit;
 
 
     public MenuPage(WebDriver d) {      //Constructor
