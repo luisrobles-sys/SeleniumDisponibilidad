@@ -5,4 +5,6 @@ Feature: ID:6 MS para mantenimiento de usuarios
 
   Scenario: Datos correctos
     Given que tengo un MS de mantenimiento de usuarios
+    When doy click en el boton de login
+    And colocamos los datos del coordinador
 
